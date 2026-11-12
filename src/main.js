@@ -11,7 +11,10 @@ import {
     classementParNote,
     majNote
 } from "./etudiants.js";
-
+import {
+    chargerUtilisateurs,
+    chargerUtilisateur
+} from "./charger.js";
 // Chargement du fichier JSON
 const etudiants = JSON.parse(
     await readFile(
@@ -92,3 +95,35 @@ console.log(
 );
 
 console.log("\n========== FIN DU PROGRAMME ==========");
+
+// ==========================================
+// PARTIE E : ASYNCHRONISME ET API
+// ==========================================
+
+console.log("\n========== PARTIE E : API ==========");
+
+// SCÉNARIO 1 : Chargement réussi de 3 utilisateurs
+console.log("\n1. SUCCÈS : CHARGER 3 UTILISATEURS");
+
+const utilisateurs = await chargerUtilisateurs(3);
+
+console.log("Résultat :", utilisateurs);
+
+// SCÉNARIO 2 : Utilisateur inexistant
+console.log("\n2. UTILISATEUR INEXISTANT");
+
+const utilisateurInexistant = await chargerUtilisateur(99999);
+
+console.log("Résultat :", utilisateurInexistant);
+
+// SCÉNARIO 3 : Erreur réseau
+console.log("\n3. ERREUR RÉSEAU");
+
+const utilisateursErreur = await chargerUtilisateurs(
+    3,
+    "https://hote-invalide.exemple"
+);
+
+console.log("Résultat :", utilisateursErreur);
+
+console.log("\n========== FIN DE LA PARTIE E ==========");
