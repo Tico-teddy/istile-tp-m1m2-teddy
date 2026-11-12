@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ISTILE Annuaire</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <!-- En-tête -->
+    <header>
+        <h1>ISTILE Annuaire</h1>
+
+        <nav>
+            <a href="#recherche">Recherche</a>
+            <a href="#etudiants">Étudiants</a>
+            <a href="#contact">Contact</a>
+        </nav>
+    </header>
+
+    <main>
+
+        <!-- Section Recherche -->
+        <section id="recherche">
+            <h2>Rechercher un étudiant</h2>
+
+            <form>
+                <label for="recherche-etudiant">
+                    Nom ou prénom de l'étudiant
+                </label>
+
+                <input type="search" id="recherche-etudiant" name="recherche" placeholder="Exemple : Aïcha Ngo">
+
+                <button type="submit">Rechercher</button>
+            </form>
+        </section>
+
+        <!-- Section Étudiants -->
+        <section id="etudiants">
+            <h2>Notre annuaire des étudiants</h2>
+
+            <div class="grille-etudiants">
+
+                <article class="carte-etudiant">
+                    <h3>Aïcha Ngo</h3>
+                    <p><strong>Filière :</strong> Informatique</p>
+                    <p><strong>Note :</strong> 14/20</p>
+                </article>
+
+                <article class="carte-etudiant">
+                    <h3>Paul Tchinda</h3>
+                    <p><strong>Filière :</strong> Réseaux</p>
+                    <p><strong>Note :</strong> 9/20</p>
+                </article>
+
+                <article class="carte-etudiant">
+                    <h3>Marie Fotso</h3>
+                    <p><strong>Filière :</strong> Génie logiciel</p>
+                    <p><strong>Note :</strong> 16/20</p>
+                </article>
+
+                <article class="carte-etudiant">
+                    <h3>Christelle Nkou</h3>
+                    <p><strong>Filière :</strong> Informatique</p>
+                    <p><strong>Note :</strong> 11.5/20</p>
+                </article>
+
+                <article class="carte-etudiant">
+                    <h3>Brice Essomba</h3>
+                    <p><strong>Filière :</strong> Réseaux</p>
+                    <p><strong>Note :</strong> 7.5/20</p>
+                </article>
+
+                <article class="carte-etudiant">
+                    <h3>Linda Mvondo</h3>
+                    <p><strong>Filière :</strong> Génie logiciel</p>
+                    <p><strong>Note :</strong> 13/20</p>
+                </article>
+
+            </div>
+        </section>
+
+        <!-- Section Contact -->
+        <section id="contact">
+            <h2>Contact</h2>
+            <p>
+                Pour toute information, contactez-nous à :
+                <a href="mailto:contact@istile.cm">contact@istile.cm</a>
+            </p>
+        </section>
+
+    </main>
+
+    <!-- Pied de page -->
+    <footer>
+        <p>&copy; 2026 ISTILE Annuaire - Tous droits réservés.</p>
+    </footer>
+
+</body>
+
+</html>
